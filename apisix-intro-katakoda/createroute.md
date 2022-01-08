@@ -27,9 +27,7 @@ This routing configuration means that all matching inbound requests will be forw
 
 Once this route is created, we can access the Upstream service using the address exposed by Apache APISIX.
 
-```bash
-curl -i -X GET "http://{APISIX_BASE_URL}/services/users/getAll?limit=10" -H "Host: example.com"
-```
+`curl -i -X GET "http://{APISIX_BASE_URL}/services/users/getAll?limit=10" -H "Host: example.com"`{{execute}}
 
 This will be forwarded to `http://httpbin.org:80/services/users/getAll?limit=10` by Apache APISIX.
 
@@ -37,9 +35,7 @@ This will be forwarded to `http://httpbin.org:80/services/users/getAll?limit=10`
 
 After reading the previous section, we know that we must set up an Upstream for the Route. An Upstream can be created by simply executing the following command:
 
-```bash
-curl "http://127.0.0.1:9080/apisix/admin/upstreams/1" -H "X-API-KEY: edd1c9f034335f136f87ad84b625c8f1" -X PUT -d '{  "type": "roundrobin",  "nodes": {    "httpbin.org:80": 1  }}'
-```
+`curl "http://127.0.0.1:9080/apisix/admin/upstreams/1" -H "X-API-KEY: edd1c9f034335f136f87ad84b625c8f1" -X PUT -d '{ "type": "roundrobin", "nodes": { "httpbin.org:80": 1 }}'`{{execute}}
 
 We use roundrobin as the load balancing mechanism, and set httpbin.org:80 as our upstream target (Upstream service) with an ID of 1. For more information on the fields, see Admin API.
 
@@ -49,6 +45,4 @@ We use roundrobin as the load balancing mechanism, and set httpbin.org:80 as our
 
 We've just created an Upstream service (referencing our backend service), now let's bind a Route for it!
 
-```bash
-curl "http://127.0.0.1:9080/apisix/admin/routes/1" -H "X-API-KEY: edd1c9f034335f136f87ad84b625c8f1" -X PUT -d '{  "uri": "/get",  "host": "httpbin.org",  "upstream_id": "1"}'
-```
+`curl "http://127.0.0.1:9080/apisix/admin/routes/1" -H "X-API-KEY: edd1c9f034335f136f87ad84b625c8f1" -X PUT -d '{ "uri": "/get", "host": "httpbin.org", "upstream_id": "1"}'`{{execute}}

@@ -25,9 +25,7 @@ The request URL consists of these components:
 
 Run the following command to send the request:
 
-```bash
-    curl --location --request GET "http://httpbin.org/get?foo1=bar1&foo2=bar2"
-```
+`curl --location --request GET "http://httpbin.org/get?foo1=bar1&foo2=bar2"`{{execute}}
 
 ### Response
 
@@ -47,5 +45,5 @@ Run the following command to send the request:
 
 ## Pre-requisites
 
-* Installed Docker and Docker Compose component.
-* We use the curl command for API testing. You can also use other tools such as Postman for testing.
+- Installed Docker and Docker Compose component.
+- We use the curl command for API testing. You can also use other tools such as Postman for testing.

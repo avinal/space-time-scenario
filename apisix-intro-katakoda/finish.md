@@ -4,11 +4,8 @@
 
   The following are commands to terminate a process that is listening on a specific port (on unix-based systems).
 
-  ```bash
-      sudo fuser -k 9443/tcp
-  ```
+`sudo fuser -k 9443/tcp`{{execute}}
 
 - If the Docker container keeps restarting or failing, log in to the container and observe the logs to diagnose the problem.
-  ```bash
-  docker logs -f --tail container_id
-  ```
+
+`docker logs -f --tail container_id`{{execute}}
