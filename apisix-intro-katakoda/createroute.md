@@ -10,14 +10,14 @@ We can create a Route and connect it to an Upstream service(also known as the Up
 
 Because we have configured matching rules for the Route object, Apache APISIX can forward the request to the corresponding Upstream service. The following code is an example of a Route configuration:
 
-```json
+<pre>
 {
   "methods": ["GET"],
   "host": "example.com",
   "uri": "/services/users/*",
   "upstream": { "type": "roundrobin", "nodes": { "httpbin.org:80": 1 } }
 }
-```
+</pre>
 
 This routing configuration means that all matching inbound requests will be forwarded to the Upstream service httpbin.org:80 when they meet all the rules listed below:
 

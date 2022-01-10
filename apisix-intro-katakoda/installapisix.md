@@ -1,6 +1,6 @@
 # Step 1: Install Apache APISIX#
 
-Thanks to Docker, we can start Apache APISIX and enable it by enabling Admin API.
+Run the following commands to install APISIX and start APISIX.
 
 `git clone https://github.com/apache/apisix-docker.git`{{execute}}
 
@@ -18,7 +18,7 @@ Once the download is complete, execute the `curl` command on the host running Do
 
 The following data is returned to indicate that Apache APISIX was successfully started:
 
-<pre class="json">
+<pre>
 {
   "count": 1,
   "action": "get",

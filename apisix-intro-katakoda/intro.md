@@ -1,7 +1,5 @@
 # Getting Started
 
-## Summary
-
 This article is a quick start guide for Apache APISIX. The Quick Start is divided into the following three steps:
 
 1. Install Apache APISIX via Docker Compose.
@@ -23,10 +21,6 @@ The request URL consists of these components:
 - Path: The path, /get is used in our example.
 - Query Parameters: the query string, two strings foo1 and foo2 are listed in our example.
 
-Run the following command to send the request:
-
-`curl --location --request GET "http://httpbin.org/get?foo1=bar1&foo2=bar2"`{{execute}}
-
 ### Response
 
 <pre>
@@ -46,6 +40,8 @@ Run the following command to send the request:
 </pre>
 
 ## Pre-requisites
+
+For this particular tutorial you don't need to install any pre-requisites. However the following are required when using on your local machine.
 
 - Installed Docker and Docker Compose component.
 - We use the curl command for API testing. You can also use other tools such as Postman for testing.
