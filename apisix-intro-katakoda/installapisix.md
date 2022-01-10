@@ -2,13 +2,11 @@
 
 Thanks to Docker, we can start Apache APISIX and enable it by enabling Admin API.
 
-
 `git clone https://github.com/apache/apisix-docker.git`{{execute}}
 
 `cd apisix-docker/example`{{execute}}
 
 `docker-compose -p docker-apisix up -d`{{execute}}
-
 
 > Apache APISIX has already supported ARM64 architecture. For ARM64 users, please use `docker-compose -p docker-apisix -f docker-compose-arm64.yml up -d` instead in the last step.
 
@@ -20,10 +18,10 @@ Once the download is complete, execute the `curl` command on the host running Do
 
 The following data is returned to indicate that Apache APISIX was successfully started:
 
-```json
+<pre class="json">
 {
   "count": 1,
   "action": "get",
   "node": { "key": "/apisix/services", "nodes": {}, "dir": true }
 }
-```
+</pre>

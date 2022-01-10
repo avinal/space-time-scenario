@@ -29,7 +29,7 @@ Run the following command to send the request:
 
 ### Response
 
-```json
+<pre class="json">
 {
   "args": { "foo1": "bar1", "foo2": "bar2" },
   "headers": {
@@ -41,7 +41,7 @@ Run the following command to send the request:
   "origin": "58.152.81.42",
   "url": "http://httpbin.org/get?foo1=bar1&foo2=bar2"
 }
-```
+</pre>
 
 ## Pre-requisites
 
