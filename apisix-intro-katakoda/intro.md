@@ -30,7 +30,7 @@ Run the following command to send the request:
 ### Response
 
 <pre>
-<code class="language-json">
+<code class="language-json hljs">
 {
   "args": { "foo1": "bar1", "foo2": "bar2" },
   "headers": {
